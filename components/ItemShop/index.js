@@ -31,6 +31,17 @@ const StyledViewImage = styled.View`
 width : 100%;
 `
 
+const Touchable = styled.TouchableOpacity`
+justifyContent: center;
+alignItems: flex-start;
+backgroundColor: #F5FCFF;
+border-radius:10;
+border-width:0.5;
+margin: 0px 5px 10px 20px
+width:40%;
+`
+const EmptyView = styled.View``
+
 
 
 
@@ -38,26 +49,30 @@ export default class ItemShop extends React.Component {
 
     static propTypes = {
         nameArticle: PropTypes.string,
-        prix: PropTypes.string
+        prix: PropTypes.string,
+        functionPress : PropTypes.func
     }
 
 
     render() {
-        const { nameArticle, prix } = this.props;
+        const { nameArticle, prix, functionPress } = this.props;
 
         return (
-            <StyledViewArray>
-                <StyledViewImage>
-                    <StyledImage
-                        source={
-                            require('../../assets/images/robot-dev.png')
-                        }
-                        resizeMode="stretch"
-                    />
-                </StyledViewImage>
-                <StyledTextArray>{`${nameArticle}`}</StyledTextArray>
-                <StyledTextArray>{`${prix} €`}</StyledTextArray>
-            </StyledViewArray>
+            <Touchable onPress={functionPress}>
+                    <StyledViewImage>
+                        <StyledImage
+                            source={
+                                require('../../assets/images/robot-dev.png')
+                            }
+                            resizeMode="stretch"
+                        />
+                    </StyledViewImage>
+                    <StyledTextArray>{`${nameArticle}`}</StyledTextArray>
+                    <StyledTextArray>{`${prix} €`}</StyledTextArray>
+            </Touchable>
         )
     }
+
+
+    
 }

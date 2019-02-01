@@ -5,21 +5,23 @@ import PlanScreen from '../screens/PlanScreen'
 import BetScreen from '../screens/BetScreen'
 import StatsScreen from '../screens/StatsScreen'
 import MyBetsScreen from '../screens/MyBetsScreen'
+import DetailItemScreen from '../screens/DetailItemScreen'
 
 const ShopStack = createStackNavigator({
   Shop: ShopScreen,
+  Detail : DetailItemScreen,
 });
 
 ShopStack.navigationOptions = {
   tabBarLabel: 'Shop',
   tabBarOptions: {
-    activeTintColor: '#0A3A51',
+    activeTintColor: '#ccc',
     inactiveTintColor : '#6C4E56',
     labelStyle: {
       fontSize: 25,
     },
     style: {
-      backgroundColor: '#FFA264',
+      backgroundColor: '#013A4D',
       paddingBottom: 5,
     },
   },
@@ -30,15 +32,15 @@ const StatsStack = createStackNavigator({
 });
 
 StatsStack.navigationOptions = {
-  tabBarLabel: 'Stats',
+  tabBarLabel: ' Stats',
   tabBarOptions: {
-    activeTintColor: '#0A3A51',
+    activeTintColor: '#ccc',
     inactiveTintColor : '#6C4E56',
     labelStyle: {
       fontSize: 25,
     },
     style: {
-      backgroundColor: '#FFA264',
+      backgroundColor: '#013A4D',
       paddingBottom: 5,
     },
   },
@@ -49,15 +51,15 @@ const PlanStack = createStackNavigator({
 });
 
 PlanStack.navigationOptions = {
-  tabBarLabel: 'Map',
+  tabBarLabel: ' Map',
   tabBarOptions: {
-    activeTintColor: '#0A3A51',
+    activeTintColor: '#ccc',
     inactiveTintColor : '#6C4E56',
     labelStyle: {
       fontSize: 25,
     },
     style: {
-      backgroundColor: '#FFA264',
+      backgroundColor: '#013A4D',
       paddingBottom: 5,
     },
   },
@@ -69,16 +71,16 @@ const PariStack = createStackNavigator({
 });
 
 PariStack.navigationOptions = {
-  tabBarLabel: 'Bet',
+  tabBarLabel: '  Bet',
   tabBarOptions: {
-    activeTintColor: '#0A3A51',
+    activeTintColor: '#ccc',
     inactiveTintColor : '#6C4E56',
     labelStyle: {
       fontSize: 25,
       paddingBottom: 5,
     },
     style: {
-      backgroundColor: '#FFA264',
+      backgroundColor: '#013A4D',
     },
   },
 };

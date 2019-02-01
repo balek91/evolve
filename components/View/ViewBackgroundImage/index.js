@@ -23,7 +23,6 @@ export default class ViewBackgroundImage extends React.Component {
                     {
                         goBack ? (<HeaderBack titleText={namePage} goBack= {goBack}></HeaderBack>) : (<Header titleText={namePage}></Header>)
                     }
-                
                     {this.props.children}
                 </ScrollView>
                 </ImageBackground>

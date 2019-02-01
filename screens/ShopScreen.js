@@ -15,7 +15,7 @@ export default class ShopScreen extends React.Component {
     return (
       <ViewBackgroundImage namePage={'SHOP'}>
         <StyledRowView>
-          <Item nameArticle={'Pop Corn'} prix={'4'}></Item>
+          <Item nameArticle={'Pop Corn'} prix={'4'} functionPress={this.goToDetail}></Item>
           <Item nameArticle={'Coca-Cola'} prix={'5'}></Item>
         </StyledRowView>
         <StyledRowView>
@@ -27,5 +27,10 @@ export default class ShopScreen extends React.Component {
         </StyledRowView>
       </ViewBackgroundImage>
     )
+  }
+
+  goToDetail = () => {
+    this.props.navigation.push('Detail',{
+    })
   }
 }
