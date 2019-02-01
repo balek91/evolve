@@ -8,7 +8,7 @@ flex: 1;
 justifyContent: center;
 alignItems: center;
 padding-top : 20px;
-padding-bottom : 20px;
+padding-bottom : 10px;
 `
 const StyledTextBold = styled.Text
 `

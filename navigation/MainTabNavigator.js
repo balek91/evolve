@@ -4,6 +4,7 @@ import ShopScreen from '../screens/ShopScreen'
 import PlanScreen from '../screens/PlanScreen'
 import BetScreen from '../screens/BetScreen'
 import StatsScreen from '../screens/StatsScreen'
+import MyBetsScreen from '../screens/MyBetsScreen'
 
 const ShopStack = createStackNavigator({
   Shop: ShopScreen,
@@ -64,6 +65,7 @@ PlanStack.navigationOptions = {
 
 const PariStack = createStackNavigator({
   Pari: BetScreen,
+  MesParis : MyBetsScreen,
 });
 
 PariStack.navigationOptions = {

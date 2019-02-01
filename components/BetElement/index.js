@@ -57,18 +57,19 @@ export default class BetElement extends React.Component {
         awayTeam: PropTypes.string,
         awayTeamCote : PropTypes.string,
         homeTeamCote : PropTypes.string,
+        functionPress : PropTypes.func,
     }
 
 
     render() {
-        const { homeTeam, homeTeamCote, awayTeam, awayTeamCote } = this.props;
+        const { homeTeam, homeTeamCote, awayTeam, awayTeamCote, functionPress } = this.props;
         return (
 
             <StyledViewArray>
                 <StyledTextArray>{`${homeTeam} - ${awayTeam}`}</StyledTextArray>
                 <ViewRow>
                     <RigthText>
-                        <BetButton>
+                        <BetButton onPress= {functionPress}>
                             <ViewRow>
                             <BetTextNameView>
                                 <BetText>
@@ -84,7 +85,7 @@ export default class BetElement extends React.Component {
                         </BetButton>
                     </RigthText>
                     <LeftText>
-                    <BetButton>
+                    <BetButton onPress= {functionPress}>
                             <ViewRow>
                             <BetTextNameView>
                                 <BetText>
@@ -104,4 +105,5 @@ export default class BetElement extends React.Component {
 
         )
     }
+
 }
