@@ -15,8 +15,8 @@ const ShopStack = createStackNavigator({
 ShopStack.navigationOptions = {
   tabBarLabel: 'Shop',
   tabBarOptions: {
-    activeTintColor: '#ccc',
-    inactiveTintColor : '#6C4E56',
+    activeTintColor: 'white',
+    inactiveTintColor : '#FF9F5B',
     labelStyle: {
       fontSize: 25,
     },
@@ -34,8 +34,8 @@ const StatsStack = createStackNavigator({
 StatsStack.navigationOptions = {
   tabBarLabel: ' Stats',
   tabBarOptions: {
-    activeTintColor: '#ccc',
-    inactiveTintColor : '#6C4E56',
+    activeTintColor: 'white',
+    inactiveTintColor : '#FF9F5B',
     labelStyle: {
       fontSize: 25,
     },
@@ -53,8 +53,8 @@ const PlanStack = createStackNavigator({
 PlanStack.navigationOptions = {
   tabBarLabel: ' Map',
   tabBarOptions: {
-    activeTintColor: '#ccc',
-    inactiveTintColor : '#6C4E56',
+    activeTintColor: 'white',
+    inactiveTintColor : '#FF9F5B',
     labelStyle: {
       fontSize: 25,
     },
@@ -73,8 +73,8 @@ const PariStack = createStackNavigator({
 PariStack.navigationOptions = {
   tabBarLabel: '  Bet',
   tabBarOptions: {
-    activeTintColor: '#ccc',
-    inactiveTintColor : '#6C4E56',
+    activeTintColor: 'white',
+    inactiveTintColor : '#FF9F5B',
     labelStyle: {
       fontSize: 25,
       paddingBottom: 5,

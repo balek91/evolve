@@ -39,17 +39,32 @@ export default class DetailItemScreen extends React.Component {
   static navigationOptions = {
     header: null,
   }
+
+  state = {
+    article: '',
+    prix: '',
+    vetement:''
+  } 
   
   render() {
     return (
       <ViewBackgroundImage namePage={''} goBack={this.goBack}>
-        <ItemDetail nameArticle={'Pop Corn'} prix={'4'}/>
+        <ItemDetail nameArticle={this.state.article} prix={this.state.prix} vetement={this.state.vetement}/>
       </ViewBackgroundImage>
     )
   }
 
   goBack =() => {
     this.props.navigation.goBack(null)
+}
+
+componentDidMount() {
+  const { navigation } = this.props;
+  this.setState({
+    article: navigation.getParam('article', ''),
+    prix: navigation.getParam('prix', ''),
+    vetement: navigation.getParam('vetement', '')
+  });
 }
 
 }

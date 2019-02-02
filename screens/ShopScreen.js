@@ -15,22 +15,25 @@ export default class ShopScreen extends React.Component {
     return (
       <ViewBackgroundImage namePage={'SHOP'}>
         <StyledRowView>
-          <Item nameArticle={'Pop Corn'} prix={'4'} functionPress={this.goToDetail}></Item>
-          <Item nameArticle={'Coca-Cola'} prix={'5'}></Item>
+          <Item nameArticle={'Pop Corn'} prix={'4'} functionPress={() => this.goToDetail('Pop Corn' , '4' , false)}></Item>
+          <Item nameArticle={'Coca-Cola'} prix={'5'} functionPress={() => this.goToDetail('Coca-Cola' , '5' , false)}></Item>
         </StyledRowView>
         <StyledRowView>
-          <Item nameArticle={'Location Casque VR'} prix={'60'}></Item>
-          <Item nameArticle={'Pull'} prix={'37'}></Item>
+          <Item nameArticle={'Location Casque VR'} prix={'60'} functionPress={() => this.goToDetail('Location Casque VR' , '60' , false)}></Item>
+          <Item nameArticle={'Pull'} prix={'37'} functionPress={() => this.goToDetail('Pull' , '37' , true)} ></Item>
         </StyledRowView>
         <StyledRowView>
-          <Item nameArticle={'Maillot'} prix={'19'}></Item>
+          <Item nameArticle={'Maillot'} prix={'19'} functionPress={() => this.goToDetail('Maillot' , '19' , true)}></Item>
         </StyledRowView>
       </ViewBackgroundImage>
     )
   }
 
-  goToDetail = () => {
+  goToDetail = (article,prix, vetement) => {
     this.props.navigation.push('Detail',{
+      article: article,
+      prix: prix,
+      vetement:vetement
     })
   }
 }
