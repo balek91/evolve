@@ -50,19 +50,20 @@ export default class ItemShop extends React.Component {
     static propTypes = {
         nameArticle: PropTypes.string,
         prix: PropTypes.string,
-        functionPress : PropTypes.func
+        functionPress : PropTypes.func,
+        photo : PropTypes.string
     }
 
 
     render() {
-        const { nameArticle, prix, functionPress } = this.props;
+        const { nameArticle, prix, functionPress, photo } = this.props;
 
         return (
             <Touchable onPress={functionPress}>
                     <StyledViewImage>
                         <StyledImage
                             source={
-                                require('../../assets/images/robot-dev.png')
+                                {uri : photo}
                             }
                             resizeMode="stretch"
                         />

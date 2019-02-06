@@ -43,13 +43,14 @@ export default class DetailItemScreen extends React.Component {
   state = {
     article: '',
     prix: '',
-    vetement:''
+    vetement:'',
+    item : ''
   } 
   
   render() {
     return (
       <ViewBackgroundImage namePage={''} goBack={this.goBack}>
-        <ItemDetail nameArticle={this.state.article} prix={this.state.prix} vetement={this.state.vetement}/>
+        <ItemDetail nameArticle={this.state.article} prix={this.state.prix} vetement={this.state.vetement} item={this.state.item}/>
       </ViewBackgroundImage>
     )
   }
@@ -63,7 +64,8 @@ componentDidMount() {
   this.setState({
     article: navigation.getParam('article', ''),
     prix: navigation.getParam('prix', ''),
-    vetement: navigation.getParam('vetement', '')
+    vetement: navigation.getParam('vetement', ''),
+    item : navigation.getParam('item', ''),
   });
 }
 

@@ -13,6 +13,22 @@ borderRadius : 20;
 marginBottom : 20px;
 `
 
+const ViewNameChart = styled.View`
+marginLeft : 5%;
+marginTop : 10px;`
+
+const ViewNameChart2 = styled.View`
+marginLeft : 5%;
+marginBottom : 20px;
+marginTop : 10px;`
+
+const TextNameChart = styled.Text`
+color : white;
+fontSize : 18;
+fontWeight : bold;
+`
+
+
 const widthWindows = Dimensions.get("window").width
 export default class StatsScreen extends React.Component {
   static navigationOptions = {
@@ -25,6 +41,11 @@ export default class StatsScreen extends React.Component {
 
     return (
       <ViewBackgroundImage namePage={'STATS'}>
+      <ViewNameChart>
+        <TextNameChart>
+          Victory By Team
+        </TextNameChart>
+      </ViewNameChart>
         <VictoryPie
           colorScale={["tomato", "orange", "green", "navy"]}
           data={[
@@ -36,6 +57,11 @@ export default class StatsScreen extends React.Component {
           labelRadius={75}
           style={{ labels: { fill: "white", fontSize: 16 } }}
         />
+        <ViewNameChart2>
+        <TextNameChart>
+          Kill By Minutes
+        </TextNameChart>
+      </ViewNameChart2>
           <ViewStats>
             <VictoryChart
             width={widthWindows/10*9}
@@ -62,6 +88,11 @@ export default class StatsScreen extends React.Component {
             </VictoryChart>
 
           </ViewStats>
+          <ViewNameChart2>
+        <TextNameChart>
+          Kill By Minutes By Team
+        </TextNameChart>
+      </ViewNameChart2>
         <ViewStats>
           <VictoryChart width={widthWindows/10*9}>
             <VictoryGroup offset={20}
